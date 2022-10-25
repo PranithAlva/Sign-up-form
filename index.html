@@ -30,52 +30,88 @@
 						<strong>You <em>know</em> you want to</strong>
 					</p>
 				</div>
-
-				<div id="form-box">
-					<strong>Let's do this!</strong>
-					<form action="" method="POST">
-						<div>
-							<label for="first-name"
-								>FIRST NAME<input type="text" id="first-name" name="first-name"
-							/></label>
+				<form action="" method="POST">
+					<div id="form-box">
+						<div id="heading"><strong>Let's do this!</strong></div>
+						<div class="form-block">
+							<label for="first-name">FIRST NAME</label
+							><input
+								type="text"
+								id="first-name"
+								name="first-name"
+								placeholder="Jhon"
+								required
+							/>
 						</div>
-						<div>
-							<label for="last-name"
-								>LAST NAME<input type="text" id="last-name" name="last-name"
-							/></label>
+						<div class="form-block">
+							<label for="last-name">LAST NAME</label
+							><input
+								type="text"
+								id="last-name"
+								name="last-name"
+								placeholder="Doe"
+								required
+							/>
 						</div>
-						<div>
-							<label for="email"
-								>EMAIL<input type="email" id="email" name="email"
-							/></label>
+						<div class="form-block">
+							<label for="email">EMAIL</label
+							><input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="jhondoe@abc.com"
+								required
+							/>
 						</div>
-						<div>
-							<label for="phone-number"
-								>PHONE NUMBER<input
-									type="tel"
-									id="phone-number"
-									name="phone-number"
-									maxlength="10"
-							/></label>
+						<div class="form-block">
+							<label for="phone-number">PHONE NUMBER</label
+							><input
+								type="tel"
+								id="phone-number"
+								name="phone-number"
+								maxlength="10"
+								required
+							/>
 						</div>
-						<div>
-							<label for="Password">
-								PASSWORD
-								<input type="password" id="password" name="password" />
-							</label>
+						<div class="form-block">
+							<label for="Password"> PASSWORD</label>
+							<input
+								type="password"
+								id="password"
+								name="password"
+								pattern="[0-9][a-z][A-Z]"
+								required
+							/>
 						</div>
-						<div>
-							<label for="Confirm-Password"
-								>CONFIRM PASSWORD<input
-									type="confirm-password"
-									id="confirm-password"
-									name="confirm-password"
-							/></label>
+						<div class="form-block">
+							<label for="Confirm-Password">CONFIRM PASSWORD</label
+							><input
+								type="confirm-password"
+								id="confirm-password"
+								name="confirm-password"
+								required
+							/>
 						</div>
-					</form>
+					</div>
+					<button type="submit" class="form-closer" id="submit-button">
+						Create Account
+					</button>
+					<div class="form-closer" id="register-link">
+						Already have an account? <a href="">Log in</a>
+					</div>
+				</form>
+				<div id="shoutout">
+					white tiger Photo by
+					<a
+						href="https://unsplash.com/@vrnex?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						>Kar Ming Moo</a
+					>
+					on
+					<a
+						href="https://unsplash.com/s/photos/tiger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						>Unsplash</a
+					>
 				</div>
-				<button type="submit">Create Account</button>
-				<div>Already have an account? <a href="">Log in</a></div>
 			</div>
 		</div>
 	</body>

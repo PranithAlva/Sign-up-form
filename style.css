@@ -1,5 +1,29 @@
 :root {
 	box-sizing: border-box;
+	--text-primary-color: white;
+	--text-secondary-color: black;
+
+	--background-primary: white;
+	--background-secondary: black;
+
+	--canvas-color: #e5e7eb;
+
+	--button-color: #596d48;
+	--border-default-color: #e5e7eb;
+
+	--border-color: #e5e7eb;
+	--border-focus: blue;
+	--border-error: red;
+
+	--error-color: red;
+
+	--font-10: 0.7rem;
+	--font-50: 0.8rem;
+	--font-100: 1rem;
+	--font-200: 1.5rem;
+	--font-300: 2rem;
+	--font-400: 2.5rem;
+	--font-500: 5rem;
 }
 
 /*downloaded font*/
@@ -138,7 +162,7 @@ table {
 }
 #display-img {
 	height: 100vh;
-	width: 30vw;
+	width: 35%;
 	float: left;
 }
 
@@ -146,12 +170,12 @@ table {
 	background: rgba(255, 255, 255, 0.1);
 	/*tried several ways out this is ok fix but still dosnt feels the best*/
 	padding: 5px;
-	width: 29vw;
+	width: 35%;
 	position: absolute;
 	top: 15%;
 	text-align: center;
-	color: white;
-	font-size: 100px;
+	color: var(--text-primary-color);
+	font-size: var(--font-500);
 	font-family: Norse-Bold;
 }
 
@@ -161,21 +185,190 @@ table {
 }
 #canvas {
 	float: right;
-	width: 70vw;
-	background: rgb(247, 247, 247);
+	width: 65%;
+	background: var(--canvas-color);
 	height: 100vh;
+	font-size: calc(3px + 1vw);
 }
 
 #intro {
-	margin: 200px 100px 50px 50px;
+	margin: 100px 300px 40px 40px;
 	font-family: Arial, Helvetica, sans-serif;
-	line-height: 17px;
+	line-height: 20px;
 }
 
 #form-box {
-	background: white;
+	background: var(--background-primary);
 	box-shadow: 0px 3px 5px 0px rgb(151, 148, 148);
 	padding: 10px;
 }
 
+input {
+	border-radius: 5px;
+}
+
+#form-box {
+	padding: 10px 40px 20px 40px;
+}
+
+button {
+	padding: 12px;
+	background: var(--button-color);
+	color: var(--text-primary-color);
+	border-radius: 8px;
+	width: 200px;
+	border: none;
+	box-shadow: 0px 3px 5px 0px rgb(151, 148, 148);
+}
+
+a {
+	color: var(--button-color);
+}
+
+#first-name:focus {
+	border-color: blue;
+}
+.form-closer {
+	margin: 30px 0 0 40px;
+	font-size: var(--font-100);
+	cursor: pointer;
+}
+
+input {
+	border: 1px solid var(--border-color);
+	width: 70%;
+	height: 22px;
+	display: block;
+}
+label {
+	display: block;
+}
+input:focus {
+	/**first remove outline*/
+	outline: none;
+	border: 2px solid blue;
+	box-shadow: 0px 3px 5px 0px rgb(219, 219, 219);
+}
+#heading {
+	margin: 10px;
+}
+
+.form-block {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-size: var(--font-50);
+	margin: 10px;
+	display: inline-block;
+	width: 40%;
+}
+/*
+.form-block::after {
+	content: "*hello world";
+	font-size: var(--font-10);
+	color: var(--error-color);
+}
+*/
 /* learned about vi*/
+/* someh u have to put the button within the*/
+
+/*pending error class and pattern matching for password field*/
+
+#email:invalid {
+	border-color: var(--border-error);
+}
+
+#shoutout {
+	position: absolute;
+	left: 0%;
+	width: 35%;
+	text-align: center;
+	top: 96%;
+	color: var(--text-primary-color);
+	font-size: var(--font-50);
+}
+
+@media (max-width: 1000px) {
+	#display-img {
+		height: 80vh;
+		width: 100%;
+	}
+
+	#logo-bar {
+		background: rgba(255, 255, 255, 0.1);
+		/*tried several ways out this is ok fix but still dosnt feels the best*/
+		padding: 5px;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		text-align: center;
+		color: var(--text-primary-color);
+		font-size: var(--font-500);
+		font-family: Norse-Bold;
+	}
+
+	#logo {
+		height: 80px;
+		display: inline;
+	}
+
+	#canvas {
+		padding-bottom: 20px;
+		width: 100%;
+		background: var(--canvas-color);
+		height: 100%;
+		font-size: calc(8px + 1vw);
+	}
+
+	#intro {
+		margin: 50px 100px 40px 40px;
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 20px;
+	}
+
+	.form-block {
+		font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+			"Lucida Sans", Arial, sans-serif;
+		font-size: var(--font-50);
+		margin: 10px auto;
+		width: 100%;
+	}
+	input {
+		width: 100%;
+	}
+	#form-box {
+		background: var(--background-primary);
+		box-shadow: 0px 5px 10px 0px rgb(151, 148, 148);
+		margin: 20px 15% 20px 15%;
+		padding-top: 20px;
+		border-radius: 10px;
+	}
+
+	input {
+		height: 28px;
+	}
+	#submit-button {
+		position: relative;
+		margin: 10px 15%;
+		width: 70%;
+		font-size: 18px;
+	}
+
+	#register-link {
+		text-align: center;
+		font-size: var(--font-100);
+	}
+
+	#shoutout {
+		position: absolute;
+		left: 0%;
+		width: 100%;
+		text-align: center;
+		top: 78%;
+		color: var(--text-primary-color);
+		font-size: var(--font-50);
+	}
+	#heading {
+		font-size: var(--font-200);
+		margin-left: 5px;
+	}
+}
