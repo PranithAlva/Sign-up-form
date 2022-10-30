@@ -109,7 +109,9 @@
 								type="password"
 								id="password"
 								name="password"
-								title="Password should be greater than 8 characters"
+								pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$"
+								title="Enter a valid password greater than 8 characters
+								eg(24kCandyPop!!)"
 								required
 							/>
 							<p id="password-missmatch" class="hidden">

@@ -13,18 +13,19 @@ function operation(e) {
 	errorMessage.classList.remove("visible");
 	dumy.classList.add("hidden");
 	dumy.classList.remove("visible");
+	console.log(confPassword.value);
 	if (
-		password.value != null &&
-		confPassword.value != null &&
-		firstName != null &&
-		lastName != null &&
-		email != null &&
-		phone != null &&
-		countryCode != null
+		password.value != "" &&
+		confPassword.value != "" &&
+		firstName.value != "" &&
+		lastName.value != "" &&
+		email.value != "" &&
+		phone.value != "" &&
+		countryCode.value != ""
 	) {
 		if (password.value != confPassword.value) {
 			console.log(e);
-			e.preventDefault();
+			e.preventDefault(); //prevent page from loading
 			password.style = "border-color:red";
 			confPassword.style = "border-color:red";
 			errorMessage.classList.remove("hidden");
