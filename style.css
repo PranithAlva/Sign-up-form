@@ -369,7 +369,7 @@ input:focus {
 		margin: 20px 5% 20px 5%;
 		padding: 3% 6% 3% 6%;
 		border-radius: 10px;
-		height: max(100%, 800px);
+		height: max(700px, 70vh);
 	}
 
 	.form-closer {
