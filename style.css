@@ -360,7 +360,7 @@ input:focus {
 	}
 	input {
 		width: 100%;
-		height: 50px;
+		height: 25px;
 	}
 	#form-box {
 		background: var(--background-primary);
