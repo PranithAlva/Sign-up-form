@@ -291,7 +291,7 @@ input:focus {
 	left: 0%;
 	width: 35%;
 	text-align: center;
-	top: 96%;
+	bottom: 2%;
 	color: var(--text-primary-color);
 	font-size: var(--font-50);
 }
